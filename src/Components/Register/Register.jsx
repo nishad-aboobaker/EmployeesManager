@@ -2,7 +2,9 @@ import React from 'react'
 import { useState } from 'react'
 import "./Register.css"
 import axios from "axios";
+import { Navigate, useNavigate } from 'react-router-dom';
 function Register() {
+  const navigate=useNavigate()
   let Photo=""
     const [Val,setVal]=useState({
       Empid:"",
@@ -49,6 +51,7 @@ function Register() {
       if(res.status==201)
       {
         alert("Data Added")
+        navigate("/")
       }
       else
       {
