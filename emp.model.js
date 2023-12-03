@@ -11,4 +11,4 @@ const Employee_schema=new mongoose.Schema({
     Photo:{type:String}
 })
 
-export default mongoose.model.Movies||mongoose.model("Movie",Employee_schema)
+export default mongoose.model.employees||mongoose.model("employee",Employee_schema)

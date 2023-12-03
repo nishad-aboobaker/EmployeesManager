@@ -63,25 +63,141 @@ function Register() {
 
 
   return (
-    <div>
       <div>
-         <h1>Registration Form</h1>
-    <p>Please fill out this form with the required information</p>
-    <form onSubmit={AddData} >
-      <fieldset>
-        <label>Empid: <input type="text"onChange={getData}  name="Empid" required /></label>
-        <label>Name: <input type="text"onChange={getData}  name="Name" required /></label>
-        <label>Email: <input type="email" onChange={getData}  name="Email" required /></label>
-        <label>Phone: <input type="text" onChange={getData}  name="Phone" required /></label>
-        <label>Address:<textarea name="Address" onChange={getData}  rows="5" cols="30"></textarea></label>
-        <label>Salary: <input type="number" onChange={getData}  name="Salary" required /></label>
-        <label>Designation: <input type="text" onChange={getData}  name="Designation" required /></label>
-        <label>Experience: <input type="text" onChange={getData}  name="Experience" required /></label>
-        <label>Upload a profile picture: <input type="file"  onChange={photoUpload} /></label>
-      <input type="submit" value="Submit"/>
-      </fieldset>
-    </form>
+      <div className="formbold-main-wrapper">
+  <div className="formbold-form-wrapper">
+ 
+    <form action="" onSubmit={AddData}>
+      <div className="formbold-input-wrapp formbold-mb-3">
+        <label  className="formbold-form-label"> Name </label>
+
+        <div>
+          <input
+            type="text"
+            name="Name"
+            id="firstname"
+            placeholder="Name"
+            className="formbold-form-input"
+            required
+            onChange={getData}
+          />
+        </div>
       </div>
+
+      <div className="formbold-input-wrapp formbold-mb-3">
+        <label  className="formbold-form-label"> Empid </label>
+
+        <div>
+          <input
+            type="number"
+            name="Empid"
+            id="Empid"
+            placeholder="Empid"
+            className="formbold-form-input"
+            required
+            onChange={getData}
+          />
+        </div>
+      </div>
+
+      <div className="formbold-mb-3">
+        <label className="formbold-form-label"> Contact Details </label>
+
+        <div>
+        <input
+          type="email"
+          name="Email"
+          id="Email"
+          placeholder="example@email.com"
+          className="formbold-form-input"
+          required
+          onChange={getData}
+        />
+
+          <input
+            type="number"
+            name="Phone"
+            id="Phone"
+            placeholder="Phone number"
+            className="formbold-form-input"
+            required
+            onChange={getData}
+          />
+        </div>
+      </div>
+
+      <div className="formbold-mb-3">
+        <label className="formbold-form-label"> Designation </label>
+
+        <input
+          type="text"
+          name="Designation"
+          id="Designation"
+          placeholder="Designation"
+          className="formbold-form-input formbold-mb-3"
+          required
+          onChange={getData}
+        />
+      </div>
+
+      <div className="formbold-mb-3">
+        <label className="formbold-form-label"> Address </label>
+
+        <input
+          type="text"
+          name="Address"
+          id="Address"
+          placeholder="Address"
+          className="formbold-form-input formbold-mb-3"
+          required
+          onChange={getData}
+        />
+      </div>
+
+      <div className="formbold-mb-3 formbold-input-wrapp">
+        <label className="formbold-form-label"> Salary & Experience </label>
+
+        <div>
+          <input
+            type="number"
+            name="Salary"
+            id="Salary"
+            placeholder="Salary"
+            className="formbold-form-input"
+            required
+            onChange={getData}
+          />
+
+          <input
+            type="number"
+            name="Experience"
+            id="Experience"
+            placeholder="Experience"
+            className="formbold-form-input"
+            required
+            onChange={getData}
+          />
+
+        </div>
+      </div>
+
+      <div className="formbold-mb-3">
+        <label className="formbold-form-label">
+          Upload Signature
+        </label>
+        <input
+          type="file"
+          name="upload"
+          id="upload"
+          className="formbold-form-input formbold-form-file"
+          required
+          onChange={photoUpload}
+        />
+      </div>
+      <button className="formbold-btn">Submit</button>
+    </form>
+  </div>
+</div>
     </div>
   )
 }
