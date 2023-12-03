@@ -7,16 +7,17 @@ import { deleteEmployee } from "../../../Controller";
 
 
 function Home() {
-  const {id}=useParams()
-
+const {id}=useParams()
 const [Emp,setEmp]=useState([]);
 
+/////View Employeee/////
 const getEmployee=async()=>{
   const res=await axios.get("http://localhost:3004/EmployeesDetails/viewEmployee")
   setEmp(res.data)
-
 }
+//////////
 
+/////Deelete Employee/////
 const deleteEmployee = async (id) => {
   const isConfirmed = window.confirm("Are you sure you want to delete this employee?");
   if (isConfirmed) {
@@ -27,6 +28,7 @@ const deleteEmployee = async (id) => {
       }
   getEmployee() 
 }}; 
+//////////
 
 useEffect(()=>{
   getEmployee() 
