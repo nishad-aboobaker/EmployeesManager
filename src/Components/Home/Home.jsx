@@ -19,7 +19,7 @@ const getEmployee=async()=>{
 
 /////Deelete Employee/////
 const deleteEmployee = async (id) => {
-  const isConfirmed = window.confirm("Are you sure you want to delete this employee?");
+  const isConfirmed = window.confirm("Are you sure ?");
   if (isConfirmed) {
       try {
         const res = await axios.delete(`http://localhost:3004/EmployeesDetails/deleteEmployee/${id}`);
@@ -48,7 +48,7 @@ useEffect(()=>{
           <div className="textContainer">
             <p className="name">{data.Name}</p>
             <div className="others">
-            <Link className="profile" to={'/Register'}>Profile</Link>
+            <Link className="profile" to={'/Details'}>Profile</Link>
               <button className="btn" onClick={()=>{deleteEmployee(data._id)}}>Delete</button>
             </div>
           </div>

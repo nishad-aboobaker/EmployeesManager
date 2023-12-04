@@ -139,7 +139,18 @@
   .active.parent .link .fa-plus {
     opacity: 0 !important;
   }
-
+  
+  .active.parent .subnavigation {
+    display: flex;
+  }
+  
+  .active#clients .subnavigation {
+    transform: translate(-150px, 17px);
+  }
+  
+  .active#services .subnavigation {
+    transform: translate(-290px, 17px);
+  }
   
   .invisible {
     opacity: 0 !important;

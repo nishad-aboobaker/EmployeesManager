@@ -183,7 +183,7 @@ function Register() {
 
       <div className="formbold-mb-3">
         <label className="formbold-form-label">
-          Upload Signature
+          Upload Your Photo
         </label>
         <input
           type="file"
